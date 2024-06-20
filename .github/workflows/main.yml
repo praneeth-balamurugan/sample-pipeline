@@ -1,0 +1,25 @@
+name: React App Build
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+
+jobs:
+  react-app-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Creating directory
+        run: mkdir 21ITR080
+
+      - name: Printing the working directory
+        run: pwd
+
+      - name: Listing the items
+        run: ls -lrt
+
+      - name: Printing the date and time
+        run: date
+
+      - name: Completed
+        run: echo "The actions have been executed successfully"
