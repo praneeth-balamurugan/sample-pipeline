@@ -1,0 +1,21 @@
+name: React App Build
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  react-app-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run npm install
+        run: npm install
+
+      - name: Run npm build
+        run: npm run build
+
+      - name: List the contents
+        run: ls -lrt
+        
+      - name: Deployment 
+        run: echo "Deployment Step"
